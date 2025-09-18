@@ -1,0 +1,325 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment-4</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+        <nav class="container">
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact" class="contact-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <!-- Hero section -->
+        <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                Revitalize Your Clothes with Expert
+                <span class="highlight">Laundry Services!</span>
+                </h1>
+                <p>
+                From premium dry cleaning to wash and fold, our expert care and
+                convenience, affordable solutions ensure your wardrobe stays
+                fresh, clean, and perfectly maintained.
+                </p>
+                <a href="#services" class="cta-button">🛍️ Book Service Now</a>
+            </div>
+            <div class="hero-image">
+                <div class="washing-machine">
+                <div class="machine-door"></div>
+                <div
+                    style="
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    gap: 10px;
+                    "
+                >
+                    <div
+                    style="
+                        width: 20px;
+                        height: 8px;
+                        background: #fff;
+                        border-radius: 4px;
+                    "
+                    ></div>
+                    <div
+                    style="
+                        width: 20px;
+                        height: 8px;
+                        background: #fff;
+                        border-radius: 4px;
+                    "
+                    ></div>
+                </div>
+                </div>
+                <div class="bubbles">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- stats section -->
+        <section class="stats">
+        <div class="container">
+            <div class="stat-out">
+            <div class="stats-grid">
+                <div class="stat-item">
+                <h1>Our Achievements</h1>
+                </div>
+                <div class="stat-item stat-gap"></div>
+                <div class="stat-item">
+                <h3>15+</h3>
+                <p>Laundary Services</p>
+                </div>
+                <div class="stat-item">
+                <h3>240+</h3>
+                <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                <h3>2+ Yrs</h3>
+                <p>Experience</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="services" id="services">
+        <div class="container">
+            <div class="services-container">
+            <div class="services-list">
+                <div class="services-line">
+                <h3>Our Services</h3>
+                <p>
+                    Click on the Add to Cart button to add the services to your
+                    cart.
+                </p>
+                </div>
+                <div id="serviceList"></div>
+            </div>
+
+            <!-- cart section -->
+            <div class="cart">
+                <div class="cart-flex">
+                <div class="cart-bg bg-scroll">
+                    <h2>Added Items</h2>
+                    <table>
+                    <thead>
+                        <tr>
+                        <th>S. No.</th>
+                        <th>Services Name</th>
+                        <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItems"></tbody>
+                    </table>
+                    <div class="total">
+                    Total Amount: ₹<span id="totalAmount">0</span>
+                    </div>
+                </div>
+
+                <div class="book-bg">
+                    <h2>Book Now</h2>
+                    <div class="form-group">
+                    <input type="text" placeholder="Full Name" id="fullName" />
+                    </div>
+                    <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                    <input type="text" placeholder="Phone Number" id="phone" />
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="features">
+        <div class="container">
+            <div class="features-container">
+            <div class="feature-item">
+                <div class="feature-img">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100px"
+                    viewBox="0 -960 960 960"
+                    width="100px"
+                    fill="#000000"
+                >
+                    <path
+                    d="M350-40q-30 0-52.5-19.5T271-109l-71-531h560l-71 531q-4 30-26.5 49.5T610-40H350Zm0-80h260l58-440H291l59 440Zm130-200q50 0 85-35t35-85v-80h-80v80q0 17-11.5 28.5T480-400q-17 0-28.5-11.5T440-440v-80h-80v80q0 50 35 85t85 35Zm120-360q-25 0-42.5-17.5T540-740q0-25 17.5-42.5T600-800q25 0 42.5 17.5T660-740q0 25-17.5 42.5T600-680Zm-200-40q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm210 600H350h260Z"
+                    />
+                </svg>
+                </div>
+                <div class="feature-text">
+                <h3 class="feature-header">Premium Services</h3>
+                <p class="feature-para">
+                    Elevate your wardrobe with our meticulous dry cleaning, ensuring
+                    garments look and feel as good as new.
+                </p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-img">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100px"
+                    viewBox="0 -960 960 960"
+                    width="100px"
+                    fill="#000000"
+                >
+                    <path
+                    d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"
+                    />
+                </svg>
+                </div>
+                <div class="feature-text">
+                <h3 class="feature-header">Quick Support</h3>
+                <p class="feature-para">
+                    We're committed to providing prompt solutions to ensure your
+                    experience is smooth and worry-free
+                </p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-img">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100px"
+                    viewBox="0 -960 960 960"
+                    width="100px"
+                    fill="#000000"
+                >
+                    <path
+                    d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-80 92L160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11Zm200-528 77-44-237-137-78 45 238 136Zm-160 93 78-45-237-137-78 45 237 137Z"
+                    />
+                </svg>
+                </div>
+                <div class="feature-text">
+                <h3 class="feature-header">Hassle Free Delivery</h3>
+                <p class="feature-para">
+                    Enjoy seamless service with our convenient pickup and delivery
+                    options, tailored to your schedule.
+                </p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-img">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100px"
+                    viewBox="0 -960 960 960"
+                    width="100px"
+                    fill="#000000"
+                >
+                    <path
+                    d="M480-600 340-740l140-140 140 140-140 140ZM40-160v-160q0-34 23.5-57t56.5-23h131q20 0 38 10t29 27q29 39 71.5 61t90.5 22q49 0 91.5-22t70.5-61q13-17 30.5-27t36.5-10h131q34 0 57 23t23 57v160H640v-91q-35 25-75.5 38T480-200q-43 0-84-13.5T320-252v92H40Zm120-280q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T280-560q0 50-34.5 85T160-440Zm640 0q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T920-560q0 50-34.5 85T800-440Z"
+                    />
+                </svg>
+                </div>
+                <div class="feature-text">
+                <h3 class="feature-header">Affordable Prices</h3>
+                <p class="feature-para">
+                    Experience exceptional care without breaking the bank - our
+                    affordable prices make laundry day stress-free.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="newsletter">
+        <div class="container newsletter-section">
+
+            <div class="newsletter-header">
+                <h1>Subscribe to our Newsletter</h1>
+            </div>
+
+            <div class="newsletter-form">
+                <div class="form-top">
+                    <input type="text" name="name" id="name" placeholder="Name" />
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                </div>
+                <button class="form-btn">Subscribe</button>
+                
+            </div>
+
+            
+        </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="logo">Logo</div>
+                        <p>&nbsp;</p>
+                        <div class="social-links">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Important Links</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li>mail@site.com</li>
+                            <li>+91 91234 56780</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <p>Stay connected with us on social media for the latest updates and offers.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Laundary Services. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+        <script src="email.js"></script>
+        <script src="script.js"></script>
+        
+    </script>
+    </body>
+    </html>
