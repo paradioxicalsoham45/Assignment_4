@@ -300,6 +300,14 @@ nav {
     border-bottom: 1px solid #eee;
 }
 
+#responseMessage {
+    transition: all 1s ease;
+}
+
+#responseMessage.fade-out {
+    opacity: 0;
+}
+
 .cart {
     height: 100%;
 }

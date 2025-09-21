@@ -46,6 +46,15 @@ function renderCart() {
         `;
     });
     totalAmountEl.textContent = total;
+
+    // const bookBtn = document.getElementById("bookBtn");
+    // if (cart.length > 0) {
+    //     bookBtn.disabled = false;
+    //     bookBtn.style.opacity = 1;
+    // } else {
+    //     bookBtn.disabled = true;
+    //     bookBtn.style.opacity = 0.5;
+    // }
 }
 
 function toggleCart(index) {
@@ -65,18 +74,23 @@ function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-
 function sendMail() {
     const fullName = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    const responseMessage = document.getElementById("resposeMessage");
+    const responseMessage = document.getElementById("responseMessage");
 
-    responseMessage.innerHTML = ""
-    responseMessage.style.color = ""
+    responseMessage.innerHTML = "";
+    responseMessage.style.color = "";
+
+    if (cart.length === 0) {
+        responseMessage.style.color = "red";
+        responseMessage.innerHTML = "⚠️ Please add at least one service to the cart before booking.";
+        return;
+    }
 
     if (!fullName || !email || !phone) {
-        responseMessage.innerHTML = "⚠️ Please fill in all fields."
+        responseMessage.innerHTML = "⚠️ Please fill in all fields.";
         return;
     }
 
@@ -85,22 +99,42 @@ function sendMail() {
         return;
     }
 
-
     const templateParams = {
         to_email: email, // user input
         user_name: fullName, // user input
         user_phone: phone,
+        services_list: cart.map(item => item.name).join(", "),
+        total_amount: cart.reduce((sum, item) => sum + item.price, 0), // optional: send total
     };
 
-    emailjs.send("service_14erkfu", "template_41rviac", templateParams).then(() => {
+    emailjs
+        .send("service_14erkfu", "template_41rviac", templateParams)
+        .then(() => {
             responseMessage.style.color = "green";
-            responseMessage.innerHTML = "✅ Thank you for booking the service! We will get back to you soon."
+            responseMessage.innerHTML =
+                "✅ Thank you for booking the service! We will get back to you soon.";
+            setTimeout(() => {
+                responseMessage.classList.add("fade-out");
+
+                setTimeout(() => {
+                    document.getElementById("fullName").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    cart.splice(0, cart.length)
+                    renderCart();
+                    renderServices();
+                    responseMessage.remove("fade-out");
+                    responseMessage.innerHTML = "";
+                    responseMessage.style.color = ""
+                }, 4000);
+            }, 3000);
         })
-        .catch(err => {
-            responseMessage.style.color = "red"
-            responseMessage.innerHTML = "❌ Failed to send email. Please try again later."
+        .catch((err) => {
+            responseMessage.style.color = "red";
+            responseMessage.innerHTML =
+                "❌ Failed to send email. Please try again later.";
             console.error(err);
-        })
+        });
 }
 
 renderServices();
